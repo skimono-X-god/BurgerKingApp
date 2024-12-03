@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комбо предложения</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #F7F7F7;
+        }
+        h1 {
+            color: #333333;
+        }
+        .combo {
+            background-color: #FFF;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .combo h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ваши предложенные комбо</h1>
+    <div>
+        {% if combos %}
+            {% for combo in combos %}
+                <div class="combo">
+                    <h2>Комбо</h2>
+                    <pre>{{ combo }}</pre>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Нет доступных комбо.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
