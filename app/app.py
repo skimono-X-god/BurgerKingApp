@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from main import *
+from app.main import *
 app = Flask(__name__)
 
 bk = BurgerKing()
